@@ -48,36 +48,36 @@ public class ElanServiceImpl {
             Elan elan = optional.get();
 
 
-            if (elanDto.getChatId() != null) {
-                elan.setChatId(elanDto.getChatId());
+            if (elanDto.getTitle() != null) {
+                elan.setTitle(elanDto.getTitle());
             }
 
-            if (elanDto.getCourierId() != null) {
-                elan.setCourierId(elanDto.getCourierId());
+            if (elanDto.getDescription() != null) {
+                elan.setDescription(elanDto.getDescription());
             }
 
-            if (elanDto.getCustomerId() != null) {
-                elan.setCustomerId(elanDto.getCustomerId());
+            if (elanDto.getCategory() != null) {
+                elan.setCategory(elanDto.getCategory());
             }
 
-            if (elanDto.getIsRead() != null) {
-                elan.setIsRead(elanDto.getIsRead());
+            if (elanDto.getCity() != null) {
+                elan.setCity(elanDto.getCity());
             }
 
-            if (elanDto.getType() != null) {
-                elan.setType(elanDto.getType());
+            if (elanDto.getImagePath() != null) {
+                elan.setImagePath(elanDto.getImagePath());
             }
 
-            if (elanDto.getIsDeleted() != null) {
-                elan.setIsDeleted(elanDto.getIsDeleted());
-            }
-
-            if (elanDto.getMessage() != null) {
-                elanDto.setMessage(elanDto.getMessage());
+            if (elanDto.getSlug() != null) {
+                elan.setSlug(elanDto.getSlug());
             }
 
             if (elanDto.getCreatedAt() != null) {
                 elanDto.setCreatedAt(elanDto.getCreatedAt());
+            }
+
+            if (elanDto.getUpdatedAt() != null) {
+                elanDto.setUpdatedAt(elanDto.getUpdatedAt());
             }
 
             elan = elanRepository.save(elan);

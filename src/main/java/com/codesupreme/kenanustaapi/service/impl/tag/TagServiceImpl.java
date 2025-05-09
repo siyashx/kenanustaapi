@@ -48,40 +48,12 @@ public class TagServiceImpl {
             Tag tag = optional.get();
 
 
-            if (tagDto.getCourierId() != null) {
-                tag.setCourierId(tagDto.getCourierId());
+            if (tagDto.getSlug() != null) {
+                tag.setSlug(tagDto.getSlug());
             }
 
-            if (tagDto.getCustomerId() != null) {
-                tag.setCustomerId(tagDto.getCustomerId());
-            }
-
-            if (tagDto.getFromAddress() != null) {
-                tag.setFromAddress(tagDto.getFromAddress());
-            }
-
-            if (tagDto.getToAddress() != null) {
-                tag.setToAddress(tagDto.getToAddress());
-            }
-
-            if (tagDto.getCancelledCourierIds() != null) {
-                tag.setCancelledCourierIds(tagDto.getCancelledCourierIds());
-            }
-
-            if (tagDto.getStatus() != null) {
-                tagDto.setStatus(tagDto.getStatus());
-            }
-
-            if (tagDto.getPrice() != null) {
-                tagDto.setPrice(tagDto.getPrice());
-            }
-
-            if (tagDto.getDistance() != null) {
-                tagDto.setDistance(tagDto.getDistance());
-            }
-
-            if (tagDto.getIsDisable() != null) {
-                tagDto.setIsDisable(tagDto.getIsDisable());
+            if (tagDto.getLabel() != null) {
+                tag.setLabel(tagDto.getLabel());
             }
 
             tag = tagRepository.save(tag);
