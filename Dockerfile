@@ -7,11 +7,11 @@ COPY keystore.p12 /app/keystore.p12
 ADD target/kenanustaapi-0.0.1-SNAPSHOT.jar kenanustaapi.jar
 
 # HTTPS portunu aç
-EXPOSE 6666
+EXPOSE 6677
 
 # Sağlık kontrolü (HTTPS isteği)
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
-  CMD curl --fail --insecure https://localhost:6666/ || exit 1
+  CMD curl --fail --insecure https://localhost:6677/ || exit 1
 
 # Spring Boot uygulamasını başlat
 ENTRYPOINT ["java", "-jar", "kenanustaapi.jar"]
