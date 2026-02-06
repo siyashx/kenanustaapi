@@ -47,6 +47,9 @@ public class ProductServiceImpl {
         if (optional.isPresent()) {
             Product product = optional.get();
 
+            if (productDto.getCategoryId() != null) {
+                product.setCategoryId(productDto.getCategoryId());
+            }
 
             if (productDto.getTitle() != null) {
                 product.setTitle(productDto.getTitle());
